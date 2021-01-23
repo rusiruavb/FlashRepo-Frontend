@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { createCard } from "../../actions/cardActions";
+import DisplayCards from "../display_cards/display_cards";
+import PropTypes from "prop-types";
 
 class CreateCard extends Component {
   constructor(props) {
@@ -77,9 +79,15 @@ class CreateCard extends Component {
           </div>
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>
+
+        <DisplayCards/>
       </div>
     )
   }
+}
+
+CreateCard.propTypes = {
+  createCard: PropTypes.func.isRequired
 }
 
 export default connect(null, { createCard })(CreateCard);

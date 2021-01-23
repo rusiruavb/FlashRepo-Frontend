@@ -17,6 +17,9 @@ export default function NavBar() {
                 <a className="nav-link" aria-current="page" href="/create">Dashboard</a>
               </li>
               <li className="nav-item">
+                <a className="nav-link" aria-current="page" href="/cards">Cards</a>
+              </li>
+              <li className="nav-item">
                 <a className="nav-link" href="/signin">Create Account</a>
               </li>
               <li className="nav-item">
