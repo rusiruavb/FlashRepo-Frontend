@@ -1,9 +1,16 @@
 import './App.css';
+import NavBar from './components/header/Navbar'
+import PageRoutes from "./routes/pageRoutes";
+import { Provider } from "react-redux";
+import store from "./store";
 
 function App() {
   return (
-    <div className="App">
-      <h3>Flash Card Application</h3>
+    <div>
+      <Provider store={store}>
+        <NavBar/>
+        <PageRoutes/>
+      </Provider>
     </div>
   );
 }
