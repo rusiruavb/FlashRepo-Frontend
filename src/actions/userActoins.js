@@ -8,7 +8,7 @@ import {
 
 export function createUser(user) {
   return function(dispatch) {
-    axios.post(`http://localhost:8102/user/createacc`, user)
+    axios.post(`${process.env.REACT_APP_BACKEND_API_LOCAL}/user/createacc`, user)
       .then(data => dispatch({
         type: CREATE_USER,
         payload: data
@@ -19,7 +19,7 @@ export function createUser(user) {
 
 export function getUserData() {
   return function(dispatch) {
-    fetch(`http://localhost:8102/user/getacc`, {
+    fetch(`${process.env.REACT_APP_BACKEND_API_LOCAL}/user/getacc`, {
       method: "GET",
       headers: {
         Authorization: localStorage.getItem("Authorization")
@@ -35,7 +35,7 @@ export function getUserData() {
 
 export function loginUser(information) {
   return function(dispatch) {
-    axios.post(`http://localhost:8102/user/login`, information)
+    axios.post(`${process.env.REACT_APP_BACKEND_API_LOCAL}/user/login`, information)
       .then((res) => {
         localStorage.setItem("Authorization", res.data.token)
       })
