@@ -1,8 +1,9 @@
-import { CREATE_CARD, FETCH_CARD } from "../actions";
+import { CREATE_CARD, FETCH_CARD, DELETE_CARD } from "../actions";
 
 const initialState = {
   cards: [],
-  card: {}
+  card: {},
+  deleteCard: null
 }
 
 function cardReducer(state = initialState, action) {
@@ -11,6 +12,8 @@ function cardReducer(state = initialState, action) {
       return {...state, card: action.payload};
     case FETCH_CARD:
       return {...state, cards: action.payload};
+    case DELETE_CARD:
+      return {...state, deleteCard: action.payload};
     default:
       return state;
   }

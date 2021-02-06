@@ -1,4 +1,3 @@
-import './App.css';
 import NavBar from './components/header/Navbar'
 import PageRoutes from "./routes/pageRoutes";
 import { Provider } from "react-redux";

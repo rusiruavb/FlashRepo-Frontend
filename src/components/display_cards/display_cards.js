@@ -20,10 +20,15 @@ class DisplayCards extends Component {
   render() {
     return (
       <div>
- 
+        {console.log(this.props)}
         {this.props.card.map((data) => (
           <Card 
+            cardID={data._id}
             subjectName={data.subjectName}
+            lessonName={data.lessonName}
+            description={data.description}
+            question={data.question}
+            answer={data.answer}
           />
         ))}
       </div>

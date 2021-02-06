@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from "react-redux";
 import { getUserData } from "../../actions/userActoins";
 import PropTypes from "prop-types";
+import DisplayCards from "../display_cards/display_cards";
 
 class UserProfile extends Component {
 

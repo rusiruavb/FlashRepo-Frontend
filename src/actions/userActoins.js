@@ -1,13 +1,13 @@
 import axios from "axios";
 import {
-  CREATE_USER, 
+  CREATE_USER,
   FETCH_USER_ACCOUNT,
   USER_LOGIN
 } from "./index";
 
 
 export function createUser(user) {
-  return function(dispatch) {
+  return function (dispatch) {
     axios.post(`${process.env.REACT_APP_BACKEND_API_LOCAL}/user/createacc`, user)
       .then(data => dispatch({
         type: CREATE_USER,
@@ -18,7 +18,7 @@ export function createUser(user) {
 }
 
 export function getUserData() {
-  return function(dispatch) {
+  return function (dispatch) {
     fetch(`${process.env.REACT_APP_BACKEND_API_LOCAL}/user/getacc`, {
       method: "GET",
       headers: {
@@ -34,7 +34,7 @@ export function getUserData() {
 }
 
 export function loginUser(information) {
-  return function(dispatch) {
+  return function (dispatch) {
     axios.post(`${process.env.REACT_APP_BACKEND_API_LOCAL}/user/login`, information)
       .then((res) => {
         localStorage.setItem("Authorization", res.data.token)
@@ -44,7 +44,7 @@ export function loginUser(information) {
         payload: data
       }))
       .then(() => {
-        window.location="/me"
+        window.location = "/me"
       })
   }
 }

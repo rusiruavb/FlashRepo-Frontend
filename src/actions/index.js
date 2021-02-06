@@ -9,3 +9,4 @@ export const USER_LOGOUT = "USER_LOGOUT"; // logout from user profile
 // dispatch to cards
 export const CREATE_CARD = "CREATE_CARD";
 export const FETCH_CARD = "FETCH_CARD";
+export const DELETE_CARD = "DELETE_CARD";

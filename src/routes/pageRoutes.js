@@ -14,7 +14,6 @@ export default function PageRoutes() {
           <Route path="/login" component={Login} exact/>
           <Route path="/me" component={UserProfile} exact/>
           <Route path="/create" component={CreateCard} exact />
-          
         </Switch>
       </BrowserRouter>
     </div>
