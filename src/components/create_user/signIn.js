@@ -22,6 +22,8 @@ class Createuser extends React.Component {
     this.setState({[e.target.name]: e.target.value})
   }
 
+  // thi is test
+
   onSubmit(e) {
     e.preventDefault();
     const userData = {
