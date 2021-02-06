@@ -35,6 +35,7 @@ class CreateCard extends Component {
     }
     this.props.createCard(data);
   }
+  // this is test
 
   render() {
     return (
