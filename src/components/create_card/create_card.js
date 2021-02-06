@@ -36,7 +36,7 @@ class CreateCard extends Component {
     this.props.createCard(data);
   }
   // this is test
-
+  
   render() {
     return (
       <div className="container mt-5">
