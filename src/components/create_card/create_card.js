@@ -22,7 +22,7 @@ class CreateCard extends Component {
   onChange(e) {
     this.setState({[e.target.name]: e.target.value})
   }
-
+  // this is test
   onSubmit(e) {
     e.preventDefault();
     const data = { 
